@@ -172,7 +172,8 @@ jobs:
 
       - name: Grant service_role access
         run: |
-          supabase db query "GRANT ALL ON ALL TABLES IN SCHEMA public TO service_role; GRANT ALL ON ALL FUNCTIONS IN SCHEMA public TO service_role;"
+          supabase db query "GRANT ALL ON ALL TABLES IN SCHEMA public TO service_role;"
+          supabase db query "GRANT ALL ON ALL FUNCTIONS IN SCHEMA public TO service_role;"
 
       - name: Export Supabase service key
         run: |

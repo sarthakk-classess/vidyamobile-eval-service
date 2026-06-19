@@ -6,7 +6,6 @@ from datetime import datetime, timezone
 from eval_service.mastery.algorithm import (
     retrievability, initial_stability, initial_difficulty, next_interval,
 )
-from eval_service.mastery.state import CardState, DocType
 from eval_service.mastery.scheduler import (
     SchedulingEngine, infer_rating_from_quiz, infer_rating_from_practice,
 )
@@ -44,25 +43,26 @@ def test_retrievability_decays():
 
 
 def test_next_interval_positive():
-    assert next_interval(stability=8.0, desired_retention=0.90) >= 1
+    # positional args — first param is named S, not stability
+    assert next_interval(8.0, 0.90) >= 1
 
 
 def test_schedule_new_creates_state(engine):
-    state = engine.schedule_new("chunk_001", "user_abc", DocType.SYLLABUS)
+    state = engine.schedule_new("chunk_001", "user_abc", "syllabus")
     assert state.chunk_id  == "chunk_001"
     assert state.user_id   == "user_abc"
-    assert state.card_state == CardState.NEW
+    assert state.card_state == "new"
 
 
 def test_update_after_good_rating(engine):
-    state   = engine.schedule_new("c1", "u1", DocType.SLIDES)
+    state   = engine.schedule_new("c1", "u1", "lecture_slides")
     updated = engine.update(state, rating=3)
     assert updated.review_count == 1
-    assert updated.card_state in (CardState.LEARNING, CardState.REVIEW)
+    assert updated.card_state in ("learning", "review")
 
 
 def test_lapse_on_again(engine):
-    state  = engine.schedule_new("c1", "u1", DocType.ACADEMIC)
+    state  = engine.schedule_new("c1", "u1", "academic_reading")
     state  = engine.update(state, rating=3)
     state2 = engine.update(state, rating=3)
     lapsed = engine.update(state2, rating=1)
@@ -70,14 +70,14 @@ def test_lapse_on_again(engine):
 
 
 def test_due_chunks_returns_list(engine):
-    state   = engine.schedule_new("c1", "u1", DocType.SYLLABUS)
+    state   = engine.schedule_new("c1", "u1", "syllabus")
     updated = engine.update(state, rating=4)
     due     = engine.due_chunks("u1", [updated], limit=10)
     assert isinstance(due, list)
 
 
 def test_forecast_returns_schedule(engine):
-    state    = engine.schedule_new("c1", "u1", DocType.SYLLABUS)
+    state    = engine.schedule_new("c1", "u1", "syllabus")
     schedule = engine.forecast(state, days_ahead=30)
     assert isinstance(schedule, list) and len(schedule) > 0
 

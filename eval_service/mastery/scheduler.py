@@ -231,11 +231,11 @@ class SchedulingEngine:
 
 
 def infer_rating_from_quiz(score_pct: float) -> int:
-    """Map a quiz percentage (0–100) to FSRS rating 1–4."""
-    if score_pct < 1.0:   return 1
-    if score_pct < 50.0:  return 2
-    if score_pct < 85.0:  return 3
-    return 4
+    """Map a quiz score fraction (0.0–1.0) to FSRS rating 1–4."""
+    if score_pct >= 0.90: return 4
+    if score_pct >= 0.70: return 3
+    if score_pct >= 0.50: return 2
+    return 1
 
 
 def infer_rating_from_practice(correct: bool, time_taken_s: float, expected_time_s: float = 60.0) -> int:

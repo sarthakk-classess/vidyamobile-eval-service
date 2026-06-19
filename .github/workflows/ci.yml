@@ -1,0 +1,239 @@
+name: Vidya Eval Service CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: [main]
+
+env:
+  PYTHONUNBUFFERED: "1"
+  PYTHONUTF8: "1"
+
+jobs:
+
+  # ──────────────────────────────────────────────────────────────────────────
+  # Job 1: Unit tests + offline evals (no API keys required)
+  # ──────────────────────────────────────────────────────────────────────────
+  unit-tests:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[skip-unit]')"
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+
+      - name: Retrain difficulty model
+        run: python eval_service/difficulty/train.py
+        continue-on-error: true
+
+      - name: Run unit tests
+        run: pytest tests/unit/ -v --tb=short --cov=eval_service --cov-report=xml
+
+      - name: Run safety eval (mock)
+        run: python eval/safety_eval.py
+        env:
+          MOCK_ACCURACY: "0.93"
+
+      - name: Run tenant isolation eval (mock)
+        run: python eval/tenant_eval.py
+        env:
+          TENANT_MOCK_MODE: "isolated"
+
+      - name: Upload safety eval report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: safety-eval-report
+          path: reports/safety/*.json
+          if-no-files-found: ignore
+
+      - name: Upload tenant eval report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: tenant-eval-report
+          path: reports/tenant/*.json
+          if-no-files-found: ignore
+
+      - name: Upload coverage
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: coverage-xml
+          path: coverage.xml
+          if-no-files-found: ignore
+
+  # ──────────────────────────────────────────────────────────────────────────
+  # Job 2: Safety live eval against Himanshu's AI service
+  # Blocked until GEMINI_CLASSIFIER_KEY + GEMINI_FRONTIER_KEY are in secrets
+  # ──────────────────────────────────────────────────────────────────────────
+  safety-live-eval:
+    name: Safety Live Eval (AI Service)
+    runs-on: ubuntu-latest
+    needs: unit-tests
+    continue-on-error: true
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Checkout Himanshu's ai-service
+        run: git fetch origin himanshu && git checkout origin/himanshu -- ai-service/
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install eval-service deps
+        run: pip install -r requirements.txt
+
+      - name: Install ai-service deps
+        run: pip install -r ai-service/requirements.txt
+
+      - name: Verify Gemini classifier key
+        run: |
+          python - <<'EOF'
+          import os, sys
+          key = os.environ.get("GEMINI_CLASSIFIER_KEY", "")
+          if not key:
+              print("GEMINI_CLASSIFIER_KEY not set — skipping live eval")
+              sys.exit(1)
+          print("Gemini classifier key present")
+          EOF
+        env:
+          GEMINI_CLASSIFIER_KEY: ${{ secrets.GEMINI_CLASSIFIER_KEY }}
+
+      - name: Start AI service
+        run: |
+          uvicorn ai-service.main:app --host 127.0.0.1 --port 8000 &
+          sleep 5
+          curl -sf http://127.0.0.1:8000/v1/health || exit 1
+        env:
+          GEMINI_CLASSIFIER_KEY: ${{ secrets.GEMINI_CLASSIFIER_KEY }}
+          GEMINI_FRONTIER_KEY:   ${{ secrets.GEMINI_FRONTIER_KEY }}
+          SUPABASE_URL:          ci-dummy-url
+          SUPABASE_SERVICE_KEY:  ci-dummy-key
+
+      - name: Run safety live eval
+        run: python eval/safety_eval.py
+        env:
+          SAFETY_LIVE: "1"
+          AI_SERVICE_URL:        http://127.0.0.1:8000
+          GEMINI_CLASSIFIER_KEY: ${{ secrets.GEMINI_CLASSIFIER_KEY }}
+          GEMINI_FRONTIER_KEY:   ${{ secrets.GEMINI_FRONTIER_KEY }}
+
+  # ──────────────────────────────────────────────────────────────────────────
+  # Job 3: Tenant isolation live eval against local Supabase
+  # Only needs GEMINI_API_KEY — no Anthropic key required
+  # ──────────────────────────────────────────────────────────────────────────
+  tenant-live-eval:
+    name: Tenant Isolation Live Eval
+    runs-on: ubuntu-latest
+    continue-on-error: true
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Checkout Rishabh's migrations
+        run: git fetch origin rishabh && git checkout origin/rishabh -- supabase/migrations/ supabase/config.toml
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - uses: supabase/setup-cli@v1
+        with:
+          version: latest
+
+      - name: Start Supabase
+        run: supabase start
+
+      - name: Grant service_role access
+        run: |
+          supabase db execute --sql "GRANT ALL ON ALL TABLES IN SCHEMA public TO service_role;"
+
+      - name: Export Supabase service key
+        run: |
+          KEY=$(supabase status -o env | grep -oP 'sb_secret_[A-Za-z0-9_-]+')
+          echo "SUPABASE_SRK=$KEY" >> $GITHUB_ENV
+
+      - name: Seed KB
+        run: python eval_service/tenant/seed_kb.py
+        env:
+          GEMINI_API_KEY:       ${{ secrets.GEMINI_API_KEY }}
+          SUPABASE_URL:         http://localhost:54321
+          SUPABASE_SERVICE_KEY: ${{ env.SUPABASE_SRK }}
+
+      - name: Run tenant isolation eval (direct)
+        run: python eval/tenant_eval.py
+        env:
+          TENANT_DIRECT: "1"
+          GEMINI_API_KEY:       ${{ secrets.GEMINI_API_KEY }}
+          SUPABASE_URL:         http://localhost:54321
+          SUPABASE_SERVICE_KEY: ${{ env.SUPABASE_SRK }}
+
+      - name: Upload tenant live eval report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: tenant-live-eval-report
+          path: reports/tenant/*.json
+          if-no-files-found: ignore
+
+  # ──────────────────────────────────────────────────────────────────────────
+  # Job 4: Drift dashboard (always runs, uses uploaded artifacts)
+  # ──────────────────────────────────────────────────────────────────────────
+  drift-dashboard:
+    name: Drift Dashboard
+    runs-on: ubuntu-latest
+    needs: [unit-tests, tenant-live-eval]
+    if: always()
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Download safety eval report
+        uses: actions/download-artifact@v4
+        with:
+          name: safety-eval-report
+          path: reports/safety/
+        continue-on-error: true
+
+      - name: Download tenant live eval report
+        uses: actions/download-artifact@v4
+        with:
+          name: tenant-live-eval-report
+          path: reports/tenant/
+        continue-on-error: true
+
+      - name: Run drift dashboard
+        run: python eval/drift_dashboard.py
+
+      - name: Commit updated history
+        run: |
+          git config user.name  "CI Bot"
+          git config user.email "ci-bot@vidyamobile.internal"
+          git add history/metrics.jsonl reports/monitoring/dashboard_latest.md || true
+          git diff --cached --quiet || git commit -m "chore(dashboard): update eval history [skip-unit]"
+          git push || true

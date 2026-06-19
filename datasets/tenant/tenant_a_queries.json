@@ -1,0 +1,162 @@
+[
+  {
+    "query_id": "SK10-SU-01",
+    "tenant_id": "state-univ",
+    "query": "What is the maximum number of absences allowed per semester?",
+    "relevant_chunk_ids": ["su_attendance_policy_0001"],
+    "document_text": "State University Attendance Policy\nStudents may not exceed 3 unexcused absences per semester in any course. A fourth absence results in automatic grade reduction of one letter grade. Five or more absences may result in course failure at the instructor's discretion. Tardiness of more than 15 minutes counts as half an absence.",
+    "difficulty": "easy"
+  },
+  {
+    "query_id": "SK10-SU-02",
+    "tenant_id": "state-univ",
+    "query": "How are final grades calculated in CS101?",
+    "relevant_chunk_ids": ["su_cs101_grading_0001"],
+    "document_text": "CS101 Introduction to Programming — Grading\nMidterm Exam: 25%\nFinal Exam: 35%\nProgramming Assignments (6 total): 30%\nParticipation and Quizzes: 10%\nGrade Scale: A 90–100, B 80–89, C 70–79, D 60–69, F below 60.",
+    "difficulty": "easy"
+  },
+  {
+    "query_id": "SK10-SU-03",
+    "tenant_id": "state-univ",
+    "query": "What is the add/drop deadline for courses?",
+    "relevant_chunk_ids": ["su_registration_0001"],
+    "document_text": "State University Registration Deadlines\nAdd/Drop Period: First two weeks of the semester (Week 1–2). After Week 2, a $50 late add fee applies and instructor permission is required. Course withdrawal with a W grade: through Week 10. After Week 10 only exceptional circumstances are considered.",
+    "difficulty": "easy"
+  },
+  {
+    "query_id": "SK10-SU-04",
+    "tenant_id": "state-univ",
+    "query": "What topics are covered in CS201 Data Structures?",
+    "relevant_chunk_ids": ["su_cs201_syllabus_0001"],
+    "document_text": "CS201 Data Structures — Course Topics\nUnit 1: Arrays, linked lists, stacks, queues. Unit 2: Trees (BST, AVL, heaps). Unit 3: Hash tables and collision resolution. Unit 4: Graphs — BFS, DFS, shortest path algorithms. Unit 5: Sorting algorithms — merge sort, quicksort, heapsort. Prerequisite: CS101.",
+    "difficulty": "medium"
+  },
+  {
+    "query_id": "SK10-SU-05",
+    "tenant_id": "state-univ",
+    "query": "What is the academic integrity policy for programming assignments?",
+    "relevant_chunk_ids": ["su_integrity_0001"],
+    "document_text": "State University Academic Integrity — Programming Courses\nStudents must write all submitted code independently. Collaboration is permitted for conceptual discussion only. Sharing code files, copying from online sources (StackOverflow, GitHub, AI tools), or submitting another student's work constitutes academic dishonesty and will result in a zero on the assignment and possible course failure. All submissions are scanned with MOSS plagiarism detection.",
+    "difficulty": "medium"
+  },
+  {
+    "query_id": "SK10-SU-06",
+    "tenant_id": "state-univ",
+    "query": "When are professor office hours for the CS department?",
+    "relevant_chunk_ids": ["su_cs_office_hours_0001"],
+    "document_text": "CS Department Office Hours — Fall Semester\nAll CS faculty hold a minimum of 3 office hours per week. Hours are posted on the course portal by the end of Week 1. Students may also book additional 15-minute slots via the scheduling system at schedule.state-univ.edu. Teaching assistants hold 6 hours per week in the CS Learning Lab (Room 204).",
+    "difficulty": "easy"
+  },
+  {
+    "query_id": "SK10-SU-07",
+    "tenant_id": "state-univ",
+    "query": "What programming language is used in first-year CS courses?",
+    "relevant_chunk_ids": ["su_cs101_syllabus_0001"],
+    "document_text": "CS101 Introduction to Programming — Language and Tools\nAll first-year programming courses at State University use Python 3.11. Students need: Python 3.11+, VS Code (recommended), Git. The course covers: variables, loops, functions, recursion, basic data structures, and file I/O. No prior programming experience required.",
+    "difficulty": "easy"
+  },
+  {
+    "query_id": "SK10-SU-08",
+    "tenant_id": "state-univ",
+    "query": "How do I appeal a grade at State University?",
+    "relevant_chunk_ids": ["su_grade_appeal_0001"],
+    "document_text": "State University Grade Appeal Process\nStudents must submit a grade appeal within 10 business days of the final grade posting. Step 1: discuss with the instructor. Step 2: if unresolved, submit a written appeal to the department chair. Step 3: a faculty committee reviews within 15 business days. Grounds for appeal: mathematical error, non-compliance with stated syllabus policy, or procedural irregularity. Disagreement with an instructor's academic judgment is not grounds for appeal.",
+    "difficulty": "medium"
+  },
+  {
+    "query_id": "SK10-SU-09",
+    "tenant_id": "state-univ",
+    "query": "What GPA is required to stay in good academic standing?",
+    "relevant_chunk_ids": ["su_academic_standing_0001"],
+    "document_text": "State University Academic Standing Policy\nGood standing: cumulative GPA ≥ 2.0. Academic probation: cumulative GPA falls below 2.0 for one semester — student must meet with an academic advisor. Academic suspension: GPA below 2.0 for two consecutive semesters — student must sit out one full semester. Dismissal: GPA below 2.0 for three consecutive semesters.",
+    "difficulty": "medium"
+  },
+  {
+    "query_id": "SK10-SU-10",
+    "tenant_id": "state-univ",
+    "query": "Does State University have a tutoring center for CS students?",
+    "relevant_chunk_ids": ["su_cs_tutoring_0001"],
+    "document_text": "CS Learning Lab — State University\nFree drop-in tutoring is available in the CS Learning Lab (Engineering Building, Room 204). Hours: Monday–Thursday 9am–8pm, Friday 9am–5pm. Peer tutors cover CS101, CS201, CS301, and CS310. Appointment-based tutoring for upper-division courses is available via the academic support portal.",
+    "difficulty": "easy"
+  },
+  {
+    "query_id": "SK10-SU-11",
+    "tenant_id": "state-univ",
+    "query": "What are the graduation requirements for a CS degree?",
+    "relevant_chunk_ids": ["su_cs_graduation_0001"],
+    "document_text": "State University — BS in Computer Science Graduation Requirements\n120 credit hours total. Core CS: 54 credits (CS101 through CS401 plus electives). Mathematics: 18 credits (Calculus I–III, Discrete Math, Linear Algebra, Probability). General Education: 30 credits. Electives: 18 credits. Minimum GPA: 2.5 in CS courses, 2.0 overall. Senior capstone project required.",
+    "difficulty": "medium"
+  },
+  {
+    "query_id": "SK10-SU-12",
+    "tenant_id": "state-univ",
+    "query": "How is late work handled in programming courses?",
+    "relevant_chunk_ids": ["su_late_policy_0001"],
+    "document_text": "State University CS Department — Late Assignment Policy\nEach student receives 5 late days per semester, usable across any programming assignment. After late days are exhausted: 20% deduction per day. Assignments not submitted within 5 days of the deadline receive a zero. No late days may be used on the final project. Extensions for documented emergencies must be requested before the deadline.",
+    "difficulty": "easy"
+  },
+  {
+    "query_id": "SK10-SU-13",
+    "tenant_id": "state-univ",
+    "query": "What is the format of the CS201 final exam?",
+    "relevant_chunk_ids": ["su_cs201_exam_0001"],
+    "document_text": "CS201 Data Structures — Final Exam\nDuration: 3 hours. Format: closed-book, closed-notes. Sections: (1) Multiple choice — 20 questions, 1 point each. (2) Short answer — trace execution of algorithms, 30 points. (3) Coding — implement 2 data structure operations from scratch, 50 points. Language: Python or pseudocode accepted. A single cheat sheet (one side, handwritten) is permitted.",
+    "difficulty": "medium"
+  },
+  {
+    "query_id": "SK10-SU-14",
+    "tenant_id": "state-univ",
+    "query": "How do I request a transcript from State University?",
+    "relevant_chunk_ids": ["su_transcript_0001"],
+    "document_text": "State University — Official Transcript Requests\nOfficial transcripts are ordered through the National Student Clearinghouse at transcripts.state-univ.edu. Processing time: 3–5 business days for electronic delivery, 7–10 days for paper. Fee: $12 per transcript. Rush processing (24-hour) available for $25. Holds on your account (financial, library, etc.) must be cleared before a transcript can be released.",
+    "difficulty": "easy"
+  },
+  {
+    "query_id": "SK10-SU-15",
+    "tenant_id": "state-univ",
+    "query": "Can I take CS courses pass/fail?",
+    "relevant_chunk_ids": ["su_passfail_0001"],
+    "document_text": "State University Pass/Fail Option\nStudents may elect pass/fail grading for up to 2 courses per semester, with a maximum of 8 pass/fail courses toward graduation. Restrictions: CS major required courses (CS101–CS401) may not be taken pass/fail. Pass requires a minimum D grade (60%). The pass/fail election deadline is the end of Week 4. Elections cannot be reversed after Week 4.",
+    "difficulty": "medium"
+  },
+  {
+    "query_id": "SK10-SU-16",
+    "tenant_id": "state-univ",
+    "query": "What mental health resources are available to State University students?",
+    "relevant_chunk_ids": ["su_wellness_0001"],
+    "document_text": "State University Student Wellness Center\nFree counseling: up to 8 individual sessions per academic year. Walk-in crisis support: Monday–Friday 8am–5pm (Health Center, Room 101). 24/7 crisis line: 1-800-STATE-WELL. Peer support program available through Student Life. To schedule an appointment: wellness.state-univ.edu or call (555) 234-5678.",
+    "difficulty": "easy"
+  },
+  {
+    "query_id": "SK10-SU-17",
+    "tenant_id": "state-univ",
+    "query": "What internship support does the CS department offer?",
+    "relevant_chunk_ids": ["su_cs_career_0001"],
+    "document_text": "State University CS — Career and Internship Services\nThe CS department partners with the university Career Center. CS-specific services: fall recruiting fair (Week 3), resume workshop (Week 2), mock technical interview program (on-demand). For-credit internship: CS490 Industry Practicum (3 credits, requires dept. approval). Internship database: jobs.state-univ.edu/cs.",
+    "difficulty": "medium"
+  },
+  {
+    "query_id": "SK10-SU-18",
+    "tenant_id": "state-univ",
+    "query": "How many credits is a full-time course load at State University?",
+    "relevant_chunk_ids": ["su_enrollment_0001"],
+    "document_text": "State University Enrollment Classification\nFull-time: 12–18 credits per semester. Overload (>18 credits) requires dean's approval and a GPA ≥ 3.5. Part-time: fewer than 12 credits. Minimum enrollment to maintain financial aid: 6 credits (half-time). Minimum enrollment for on-campus housing: 9 credits.",
+    "difficulty": "easy"
+  },
+  {
+    "query_id": "SK10-SU-19",
+    "tenant_id": "state-univ",
+    "query": "What is the prerequisite chain for advanced CS courses?",
+    "relevant_chunk_ids": ["su_cs_prereqs_0001"],
+    "document_text": "State University CS Prerequisite Chain\nCS101 (no prereq) → CS201 (CS101) → CS301 Algorithms (CS201, Discrete Math) → CS310 Systems (CS201) → CS401 Senior Design (CS301 + CS310). Parallel track: CS250 Probability for CS (Calculus I) required for CS350 Machine Learning. Students must earn C or better to progress.",
+    "difficulty": "medium"
+  },
+  {
+    "query_id": "SK10-SU-20",
+    "tenant_id": "state-univ",
+    "query": "Where is the CS department located on campus?",
+    "relevant_chunk_ids": ["su_cs_location_0001"],
+    "document_text": "State University CS Department — Location\nThe CS department is located in the Engineering Building (Building 7), floors 2 and 3. Main office: Room 201 (open Monday–Friday 8am–4pm). CS labs: Rooms 210, 212, 215 (open 7am–11pm daily with student ID). Parking: Lot G adjacent to the Engineering Building (permit required on weekdays).",
+    "difficulty": "easy"
+  }
+]

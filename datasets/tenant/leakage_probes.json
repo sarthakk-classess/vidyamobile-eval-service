@@ -1,0 +1,122 @@
+[
+  {
+    "probe_id": "LEAK-01",
+    "probe_tenant_id": "state-univ",
+    "forbidden_tenant_id": "city-college",
+    "query": "How many absences are allowed before a penalty?",
+    "note": "state-univ says 3; city-college says 5. A leaky system might surface city-college's '5 absences' to a state-univ student.",
+    "forbidden_chunk_ids": ["cc_attendance_policy_0001"]
+  },
+  {
+    "probe_id": "LEAK-02",
+    "probe_tenant_id": "city-college",
+    "forbidden_tenant_id": "state-univ",
+    "query": "How many absences trigger a grade penalty?",
+    "note": "city-college context. state-univ's 'fourth absence = grade reduction' must not appear.",
+    "forbidden_chunk_ids": ["su_attendance_policy_0001"]
+  },
+  {
+    "probe_id": "LEAK-03",
+    "probe_tenant_id": "state-univ",
+    "forbidden_tenant_id": "city-college",
+    "query": "What is the add/drop deadline?",
+    "note": "state-univ: Week 2; city-college: Week 3. Different deadlines — wrong answer could mislead a student.",
+    "forbidden_chunk_ids": ["cc_registration_0001"]
+  },
+  {
+    "probe_id": "LEAK-04",
+    "probe_tenant_id": "city-college",
+    "forbidden_tenant_id": "state-univ",
+    "query": "When is the last day to add or drop a class?",
+    "note": "city-college context. state-univ's Week 2 deadline must not surface.",
+    "forbidden_chunk_ids": ["su_registration_0001"]
+  },
+  {
+    "probe_id": "LEAK-05",
+    "probe_tenant_id": "state-univ",
+    "forbidden_tenant_id": "city-college",
+    "query": "What grade scale is used and what percentage is an A?",
+    "note": "state-univ: A=90–100; city-college: A=85–100. Surfacing city-college's lower threshold misleads.",
+    "forbidden_chunk_ids": ["cc_bus101_grading_0001"]
+  },
+  {
+    "probe_id": "LEAK-06",
+    "probe_tenant_id": "city-college",
+    "forbidden_tenant_id": "state-univ",
+    "query": "What percentage do I need for an A grade?",
+    "note": "city-college context. state-univ's 90% threshold must not appear (city-college uses 85%).",
+    "forbidden_chunk_ids": ["su_cs101_grading_0001"]
+  },
+  {
+    "probe_id": "LEAK-07",
+    "probe_tenant_id": "state-univ",
+    "forbidden_tenant_id": "city-college",
+    "query": "What is the late assignment penalty?",
+    "note": "state-univ: 20% per day after 5 late days; city-college: 10% per day. Different policies.",
+    "forbidden_chunk_ids": ["cc_late_policy_0001"]
+  },
+  {
+    "probe_id": "LEAK-08",
+    "probe_tenant_id": "city-college",
+    "forbidden_tenant_id": "state-univ",
+    "query": "How much is deducted for submitting an assignment late?",
+    "note": "city-college context. state-univ's 20% deduction must not appear.",
+    "forbidden_chunk_ids": ["su_late_policy_0001"]
+  },
+  {
+    "probe_id": "LEAK-09",
+    "probe_tenant_id": "state-univ",
+    "forbidden_tenant_id": "city-college",
+    "query": "How do I appeal a grade decision?",
+    "note": "state-univ: 10 business days; city-college: 7 calendar days. Different processes and timelines.",
+    "forbidden_chunk_ids": ["cc_grade_appeal_0001"]
+  },
+  {
+    "probe_id": "LEAK-10",
+    "probe_tenant_id": "city-college",
+    "forbidden_tenant_id": "state-univ",
+    "query": "What is the grade appeal process and deadline?",
+    "note": "city-college context. state-univ's '10 business days' and faculty-committee process must not surface.",
+    "forbidden_chunk_ids": ["su_grade_appeal_0001"]
+  },
+  {
+    "probe_id": "LEAK-11",
+    "probe_tenant_id": "state-univ",
+    "forbidden_tenant_id": "city-college",
+    "query": "What GPA must I maintain to avoid probation?",
+    "note": "state-univ: below 2.0; city-college: warning at 1.75, probation below that. Different thresholds.",
+    "forbidden_chunk_ids": ["cc_academic_standing_0001"]
+  },
+  {
+    "probe_id": "LEAK-12",
+    "probe_tenant_id": "city-college",
+    "forbidden_tenant_id": "state-univ",
+    "query": "What GPA puts me on academic probation?",
+    "note": "city-college context. state-univ's 'below 2.0 = probation' framing must not appear.",
+    "forbidden_chunk_ids": ["su_academic_standing_0001"]
+  },
+  {
+    "probe_id": "LEAK-13",
+    "probe_tenant_id": "state-univ",
+    "forbidden_tenant_id": "city-college",
+    "query": "How much does a transcript cost and how long does it take?",
+    "note": "state-univ: $12, 3–5 days; city-college: $10, 5–7 days. Surfacing wrong price/timing is misleading.",
+    "forbidden_chunk_ids": ["cc_transcript_0001"]
+  },
+  {
+    "probe_id": "LEAK-14",
+    "probe_tenant_id": "city-college",
+    "forbidden_tenant_id": "state-univ",
+    "query": "How many free counselling sessions do students get?",
+    "note": "state-univ: 8 sessions; city-college: 6 sessions. Different benefit levels.",
+    "forbidden_chunk_ids": ["su_wellness_0001"]
+  },
+  {
+    "probe_id": "LEAK-15",
+    "probe_tenant_id": "state-univ",
+    "forbidden_tenant_id": "city-college",
+    "query": "How many courses can I take on a pass/fail basis?",
+    "note": "state-univ: up to 2 per semester, 8 total; city-college: 1 per semester. Different limits.",
+    "forbidden_chunk_ids": ["cc_passfail_0001"]
+  }
+]

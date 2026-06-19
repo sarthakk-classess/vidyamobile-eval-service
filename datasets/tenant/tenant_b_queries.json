@@ -1,0 +1,162 @@
+[
+  {
+    "query_id": "SK10-CC-01",
+    "tenant_id": "city-college",
+    "query": "What is the maximum number of absences allowed per semester?",
+    "relevant_chunk_ids": ["cc_attendance_policy_0001"],
+    "document_text": "City College Attendance Policy\nStudents may miss up to 5 classes per semester without penalty. On the 6th absence the student receives a written warning. Seven or more absences result in a grade of W (withdrawal) being recorded automatically. Absences for college-sanctioned activities (sports, field trips) do not count toward the limit if pre-approved by the instructor.",
+    "difficulty": "easy"
+  },
+  {
+    "query_id": "SK10-CC-02",
+    "tenant_id": "city-college",
+    "query": "How are grades calculated in BUS101?",
+    "relevant_chunk_ids": ["cc_bus101_grading_0001"],
+    "document_text": "BUS101 Principles of Management — Grading Breakdown\nGroup Project: 30%\nCase Study Presentations (3): 25%\nMidterm Exam: 20%\nFinal Exam: 15%\nClass Participation: 10%\nGrade Scale: A 85–100, B 75–84, C 65–74, D 55–64, F below 55.",
+    "difficulty": "easy"
+  },
+  {
+    "query_id": "SK10-CC-03",
+    "tenant_id": "city-college",
+    "query": "What is the deadline to add or drop a course?",
+    "relevant_chunk_ids": ["cc_registration_0001"],
+    "document_text": "City College Registration and Course Change Deadlines\nAdd/Drop Period: First three weeks of the semester (Weeks 1–3). No fee for changes within this window. After Week 3: written petition required, $25 processing fee, department head approval. Withdrawal with W grade: through Week 11. After Week 11, only medical or extreme hardship withdrawals are processed.",
+    "difficulty": "easy"
+  },
+  {
+    "query_id": "SK10-CC-04",
+    "tenant_id": "city-college",
+    "query": "What topics are covered in BUS201 Marketing Fundamentals?",
+    "relevant_chunk_ids": ["cc_bus201_syllabus_0001"],
+    "document_text": "BUS201 Marketing Fundamentals — Course Topics\nUnit 1: Marketing environment and consumer behaviour. Unit 2: Market segmentation, targeting, and positioning. Unit 3: Product development and the product life cycle. Unit 4: Pricing strategies. Unit 5: Distribution channels and supply chain basics. Unit 6: Integrated marketing communications. Prerequisite: BUS101.",
+    "difficulty": "medium"
+  },
+  {
+    "query_id": "SK10-CC-05",
+    "tenant_id": "city-college",
+    "query": "What is the academic integrity policy for group projects?",
+    "relevant_chunk_ids": ["cc_integrity_0001"],
+    "document_text": "City College Academic Integrity — Group Work Policy\nAll group members are equally responsible for submitted work. Individual contributions must be documented in a team log submitted with the assignment. Fabricating data, presenting another group's work, or ghostwriting for hire are violations. Penalty: zero on the assignment; second offence results in course failure and referral to the Dean of Students.",
+    "difficulty": "medium"
+  },
+  {
+    "query_id": "SK10-CC-06",
+    "tenant_id": "city-college",
+    "query": "When do Business department faculty hold office hours?",
+    "relevant_chunk_ids": ["cc_bus_office_hours_0001"],
+    "document_text": "City College Business Department — Faculty Office Hours\nFaculty are required to hold a minimum of 2 office hours per week. Hours are published on the course syllabus distributed in Week 1. Virtual office hours via Zoom are available for evening students. The Business Student Success Centre (Commerce Building, Room 110) provides walk-in academic advising Monday–Friday 10am–4pm.",
+    "difficulty": "easy"
+  },
+  {
+    "query_id": "SK10-CC-07",
+    "tenant_id": "city-college",
+    "query": "What software tools are used in Business courses?",
+    "relevant_chunk_ids": ["cc_bus_tools_0001"],
+    "document_text": "City College Business Department — Required Software\nAll Business students need: Microsoft Office 365 (provided free via student license), Excel for data analysis, PowerPoint for presentations. BUS201 and above also require Canva (free tier) for marketing materials. BUS301 Financial Analysis uses Bloomberg Market Concepts (free student access). No coding experience required for any Business course.",
+    "difficulty": "easy"
+  },
+  {
+    "query_id": "SK10-CC-08",
+    "tenant_id": "city-college",
+    "query": "How do I appeal a grade at City College?",
+    "relevant_chunk_ids": ["cc_grade_appeal_0001"],
+    "document_text": "City College Grade Appeal Procedure\nAppeals must be filed within 7 calendar days of the grade posting. Step 1: email the instructor with specific grounds for appeal. Step 2: if unresolved within 5 days, submit the Grade Appeal Form to the Academic Standards Office. Step 3: a review panel (2 faculty + 1 student rep) issues a decision within 10 business days. Grounds: clerical error, failure to follow stated grading criteria, or bias. Dissatisfaction with a grade alone is not grounds for appeal.",
+    "difficulty": "medium"
+  },
+  {
+    "query_id": "SK10-CC-09",
+    "tenant_id": "city-college",
+    "query": "What GPA do I need to remain in good standing at City College?",
+    "relevant_chunk_ids": ["cc_academic_standing_0001"],
+    "document_text": "City College Academic Standing\nSatisfactory progress: cumulative GPA ≥ 2.0 and completion of at least 67% of attempted credits. Academic warning: GPA 1.75–1.99 — student receives a letter and must meet with an advisor. Probation: GPA below 1.75 — restricted to 12 credits per semester. Suspension: two consecutive semesters on probation — student suspended for one full academic year.",
+    "difficulty": "medium"
+  },
+  {
+    "query_id": "SK10-CC-10",
+    "tenant_id": "city-college",
+    "query": "Is there a tutoring centre for Business students?",
+    "relevant_chunk_ids": ["cc_bus_tutoring_0001"],
+    "document_text": "City College Business Student Success Centre\nFree academic support is available at the Business Student Success Centre, Commerce Building Room 110. Peer tutors cover BUS101, BUS201, ACC101, and ECO101. Tutoring hours: Tuesday and Thursday 11am–6pm, Wednesday 1pm–7pm. Online tutoring via Zoom is available for evening and part-time students by appointment.",
+    "difficulty": "easy"
+  },
+  {
+    "query_id": "SK10-CC-11",
+    "tenant_id": "city-college",
+    "query": "What are the graduation requirements for a Business diploma?",
+    "relevant_chunk_ids": ["cc_bus_graduation_0001"],
+    "document_text": "City College — Business Administration Diploma Requirements\n60 credit hours total. Core Business: 36 credits (BUS101, BUS201, BUS301, ACC101, ECO101, MGT201, MKT201, FIN201, HRM201, BUS490 Capstone). Communications: 6 credits. General Education: 12 credits. Electives: 6 credits. Minimum GPA: 2.0 overall. Work Integrated Learning placement (BUS490) required in final semester.",
+    "difficulty": "medium"
+  },
+  {
+    "query_id": "SK10-CC-12",
+    "tenant_id": "city-college",
+    "query": "What is the late assignment policy in Business courses?",
+    "relevant_chunk_ids": ["cc_late_policy_0001"],
+    "document_text": "City College Business Department — Late Submission Policy\nAssignments submitted late are penalised 10% per day, up to a maximum of 50% deduction. After 5 days, the assignment will not be accepted and receives a zero. Group project milestones have zero tolerance for lateness — no deductions applied; late milestone = zero for the milestone component. Extensions must be requested at least 24 hours before the due date.",
+    "difficulty": "easy"
+  },
+  {
+    "query_id": "SK10-CC-13",
+    "tenant_id": "city-college",
+    "query": "What is the format of BUS201 final assessment?",
+    "relevant_chunk_ids": ["cc_bus201_exam_0001"],
+    "document_text": "BUS201 Marketing Fundamentals — Final Assessment\nThe final assessment is a group marketing plan (35% of course grade) plus an individual reflection paper (10%). There is no written final exam. The marketing plan must be 2,500–3,000 words plus appendices. Presentations are held during the final two weeks; each group presents for 15 minutes followed by 5 minutes of Q&A from the instructor.",
+    "difficulty": "medium"
+  },
+  {
+    "query_id": "SK10-CC-14",
+    "tenant_id": "city-college",
+    "query": "How do I request an official transcript from City College?",
+    "relevant_chunk_ids": ["cc_transcript_0001"],
+    "document_text": "City College Official Transcript Requests\nTranscripts are requested through the Registrar's Office at registrar.city-college.edu. Processing: 5–7 business days for standard; 48-hour rush processing available for $20 extra. Standard fee: $10 per copy. Electronic delivery (PDF) is free; paper copies by mail are $15 including postage. Outstanding tuition balances must be cleared before transcripts are released.",
+    "difficulty": "easy"
+  },
+  {
+    "query_id": "SK10-CC-15",
+    "tenant_id": "city-college",
+    "query": "Can Business students take elective courses pass/fail?",
+    "relevant_chunk_ids": ["cc_passfail_0001"],
+    "document_text": "City College Pass/Fail Grading Option\nStudents may take up to 1 elective course per semester on a pass/fail basis. Core Business courses and courses in the student's declared major cannot be taken pass/fail. Pass requires a minimum of 55% (D grade). The pass/fail election must be declared by the end of Week 3 and is irrevocable. Pass/fail courses do not count toward the GPA but do count toward credit hours.",
+    "difficulty": "medium"
+  },
+  {
+    "query_id": "SK10-CC-16",
+    "tenant_id": "city-college",
+    "query": "What student wellness services are available at City College?",
+    "relevant_chunk_ids": ["cc_wellness_0001"],
+    "document_text": "City College Student Services — Wellness and Counselling\nThe Student Wellness office (Student Centre, Room 15) offers: individual counselling (up to 6 sessions free), group stress-management workshops, and mindfulness drop-in sessions (Wednesdays 12–1pm). Crisis support line: (555) 987-6543. After-hours crisis support: Text HOME to 741741 (Crisis Text Line). Appointments: wellness.city-college.edu.",
+    "difficulty": "easy"
+  },
+  {
+    "query_id": "SK10-CC-17",
+    "tenant_id": "city-college",
+    "query": "What co-op or work placement options exist for Business students?",
+    "relevant_chunk_ids": ["cc_bus_coop_0001"],
+    "document_text": "City College Business — Work Integrated Learning\nBUS490 Work Integrated Learning is a mandatory 15-week work placement in the final semester. Students are placed with employer partners in accounting, marketing, HR, or operations. The College's WIL Office posts placements through the City College Career Hub (careers.city-college.edu). Students may also source their own placement, subject to approval. Academic supervision: a faculty advisor visits the workplace twice during the semester.",
+    "difficulty": "medium"
+  },
+  {
+    "query_id": "SK10-CC-18",
+    "tenant_id": "city-college",
+    "query": "How many credits constitute a full-time course load at City College?",
+    "relevant_chunk_ids": ["cc_enrollment_0001"],
+    "document_text": "City College Enrolment Classification\nFull-time: 9–15 credits per semester (City College operates on a trimester calendar). Overload (>15 credits) requires academic advisor approval. Part-time: fewer than 9 credits. Minimum for student loan eligibility: 6 credits. Students on academic probation are capped at 12 credits.",
+    "difficulty": "easy"
+  },
+  {
+    "query_id": "SK10-CC-19",
+    "tenant_id": "city-college",
+    "query": "What is the prerequisite path through the Business program?",
+    "relevant_chunk_ids": ["cc_bus_prereqs_0001"],
+    "document_text": "City College Business Program — Prerequisite Structure\nBUS101 (open entry) → BUS201 (BUS101) + ACC101 (concurrent) → BUS301 Strategy (BUS201 + ACC101) → BUS490 Capstone (all 200-level courses). Parallel tracks: MKT201 Advanced Marketing (BUS201), FIN201 Finance (ACC101), HRM201 Human Resources (BUS101). Grade of C or better required to progress in each course.",
+    "difficulty": "medium"
+  },
+  {
+    "query_id": "SK10-CC-20",
+    "tenant_id": "city-college",
+    "query": "Where is the Business department located on campus?",
+    "relevant_chunk_ids": ["cc_bus_location_0001"],
+    "document_text": "City College Business Department — Location and Hours\nThe Business department is in the Commerce Building (south entrance off Main Street). Department office: Room 102, open Monday–Friday 8:30am–4:30pm. Faculty offices: Rooms 105–130. Computer lab for Business students: Room 115 (open Monday–Friday 7am–9pm, Saturday 9am–5pm, student card access). Nearest parking: City Centre Parkade (student discount with ID).",
+    "difficulty": "easy"
+  }
+]

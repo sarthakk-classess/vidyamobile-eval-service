@@ -1,0 +1,40 @@
+version: "3.9"
+
+services:
+  eval-service:
+    build: .
+    container_name: vidya-eval-service
+    ports:
+      - "8002:8002"
+    env_file:
+      - .env
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8002/v1/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+
+  # Optional: run evals as one-off containers
+  sk08-eval:
+    build: .
+    container_name: vidya-sk08-eval
+    env_file:
+      - .env
+    volumes:
+      - ./datasets:/app/datasets:ro
+      - ./reports:/app/reports
+    command: ["python", "eval/sk08_safety.py"]
+    profiles: ["eval"]
+
+  sk10-eval:
+    build: .
+    container_name: vidya-sk10-eval
+    env_file:
+      - .env
+    volumes:
+      - ./datasets:/app/datasets:ro
+      - ./reports:/app/reports
+    command: ["python", "eval/sk10_tenant.py"]
+    profiles: ["eval"]

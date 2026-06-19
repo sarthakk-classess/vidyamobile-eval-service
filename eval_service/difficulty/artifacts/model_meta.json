@@ -1,0 +1,37 @@
+{
+  "trained_at": "2026-06-11T09:32:49.184657+00:00",
+  "n_students": 400,
+  "n_samples": 3200,
+  "feature_names": [
+    "n_chunks",
+    "frac_seen",
+    "frac_new",
+    "frac_relearning",
+    "frac_mature",
+    "mean_difficulty",
+    "max_difficulty",
+    "mean_log_stability",
+    "min_log_stability",
+    "mean_retrievability",
+    "min_retrievability",
+    "mean_reviews",
+    "total_lapses",
+    "lapse_rate",
+    "mean_last_rating",
+    "frac_low_rating"
+  ],
+  "struggle_threshold": 0.6,
+  "metrics": {
+    "r2": 0.8769,
+    "mae": 0.0746,
+    "rmse": 0.0933,
+    "struggle_acc": 0.9328
+  },
+  "gates": {
+    "r2": 0.7,
+    "mae": 0.12,
+    "struggle_acc": 0.8
+  },
+  "passed_gate": true,
+  "seed": 7
+}

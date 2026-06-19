@@ -85,14 +85,16 @@ jobs:
           if-no-files-found: ignore
 
   # ──────────────────────────────────────────────────────────────────────────
-  # Job 2: Safety live eval against Himanshu's AI service
-  # Blocked until GEMINI_CLASSIFIER_KEY + GEMINI_FRONTIER_KEY are in secrets
+  # Job 2: Safety live eval — DISABLED in standalone repo
+  # Himanshu's ai-service lives in a separate repo/branch and cannot be
+  # fetched here. Mock safety eval in unit-tests covers all 5 gates.
+  # Re-enable this job when integrating with the main VidyaMobile pipeline.
   # ──────────────────────────────────────────────────────────────────────────
   safety-live-eval:
     name: Safety Live Eval (AI Service)
     runs-on: ubuntu-latest
     needs: unit-tests
-    continue-on-error: true
+    if: false  # disabled — ai-service not available in standalone repo
 
     steps:
       - uses: actions/checkout@v4

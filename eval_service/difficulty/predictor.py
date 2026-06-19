@@ -23,7 +23,7 @@ from eval_service.difficulty.features import (
     FEATURE_NAMES, extract_topic_features, confidence, group_by_student_topic,
 )
 
-_ARTIFACTS = Path(__file__).parent.parent.parent / "artifacts"
+_ARTIFACTS = Path(__file__).parent / "artifacts"
 MODEL_PATH = _ARTIFACTS / "difficulty_model.joblib"
 META_PATH  = _ARTIFACTS / "model_meta.json"
 

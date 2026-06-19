@@ -135,7 +135,8 @@ class DirectTenantKBClient(TenantKBClient):
 
     def __init__(self):
         self.supabase_url = os.environ.get("SUPABASE_URL", "http://127.0.0.1:54321")
-        self.srk          = os.environ.get("SUPABASE_SERVICE_ROLE_KEY", "")
+        self.srk          = os.environ.get("SUPABASE_SERVICE_ROLE_KEY",
+                            os.environ.get("SUPABASE_SERVICE_KEY", ""))
         self._gemini      = None
 
     def _get_gemini(self):

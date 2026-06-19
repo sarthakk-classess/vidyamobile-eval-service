@@ -183,7 +183,7 @@ jobs:
       - name: Seed KB
         run: python eval_service/tenant/seed_kb.py
         env:
-          GEMINI_API_KEY:       ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY:       ${{ secrets.GEMINI_EMBEDDING_KEY }}
           SUPABASE_URL:         http://localhost:54321
           SUPABASE_SERVICE_KEY: ${{ env.SUPABASE_SRK }}
 
@@ -191,7 +191,7 @@ jobs:
         run: python eval/tenant_eval.py
         env:
           TENANT_DIRECT: "1"
-          GEMINI_API_KEY:       ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY:       ${{ secrets.GEMINI_EMBEDDING_KEY }}
           SUPABASE_URL:         http://localhost:54321
           SUPABASE_SERVICE_KEY: ${{ env.SUPABASE_SRK }}
 

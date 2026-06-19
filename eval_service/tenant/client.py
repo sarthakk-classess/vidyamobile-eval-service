@@ -145,20 +145,35 @@ class DirectTenantKBClient(TenantKBClient):
             self._gemini = genai.Client(api_key=os.environ.get("GEMINI_API_KEY", ""))
         return self._gemini
 
-    def query(self, tenant_id: str, query: str, top_k: int = 5) -> list[dict]:
-        import httpx
+    def _embed_with_retry(self, query: str) -> list[float]:
+        import time
         from google.genai import types as genai_types
 
         client = self._get_gemini()
-        res    = client.models.embed_content(
-            model=self._EMBED_MODEL,
-            contents=query,
-            config=genai_types.EmbedContentConfig(
-                task_type="RETRIEVAL_QUERY",
-                output_dimensionality=self._EMBED_DIM,
-            ),
-        )
-        embedding = res.embeddings[0].values
+        for attempt in range(5):
+            try:
+                res = client.models.embed_content(
+                    model=self._EMBED_MODEL,
+                    contents=query,
+                    config=genai_types.EmbedContentConfig(
+                        task_type="RETRIEVAL_QUERY",
+                        output_dimensionality=self._EMBED_DIM,
+                    ),
+                )
+                return res.embeddings[0].values
+            except Exception as e:
+                if "429" in str(e) or "RESOURCE_EXHAUSTED" in str(e):
+                    wait = 15 * (2 ** attempt)  # 15s, 30s, 60s, 120s, 240s
+                    print(f"  [embed] quota 429 — waiting {wait}s (attempt {attempt + 1}/5)")
+                    time.sleep(wait)
+                else:
+                    raise
+        raise RuntimeError("Gemini embedding quota exceeded after 5 retries")
+
+    def query(self, tenant_id: str, query: str, top_k: int = 5) -> list[dict]:
+        import httpx
+
+        embedding = self._embed_with_retry(query)
 
         rpc_resp = httpx.post(
             f"{self.supabase_url}/rest/v1/rpc/match_kb_chunks_for_tenant",

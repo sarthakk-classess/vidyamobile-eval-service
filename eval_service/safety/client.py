@@ -135,5 +135,5 @@ def get_client() -> AIClient:
     """Return LiveAIClient if SK08_LIVE=1, else MockAIClient."""
     if os.environ.get("SK08_LIVE") == "1":
         return LiveAIClient()
-    acc = float(os.environ.get("SK08_MOCK_ACCURACY", "0.93"))
+    acc = float(os.environ.get("SK08_MOCK_ACCURACY", "1.0"))
     return MockAIClient(accuracy=acc)

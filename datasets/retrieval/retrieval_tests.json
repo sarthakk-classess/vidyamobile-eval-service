@@ -1,0 +1,142 @@
+[
+  {
+    "test_id": "SYL-001",
+    "doc_type": "syllabus",
+    "query": "What topics are covered in Unit 3 of Data Structures?",
+    "expected_chunk_contains": "Stacks :Basic Concepts Definition and Representation",
+    "expected_section_type": "course_block",
+    "expected_course_code": "2A2COMM02T",
+    "why": "Unit III of the Data Structures course begins with stacks. This chunk is the only one containing that exact content boundary. A retrieval failure here means students get the wrong unit content.",
+    "fail_means": "Chunker split Unit III from its parent course block, or the wrong course block was retrieved."
+  },
+  {
+    "test_id": "SYL-002",
+    "doc_type": "syllabus",
+    "query": "How many marks is the internal assessment test worth?",
+    "expected_chunk_contains": "CIA : C2 10 Marks",
+    "expected_section_type": "assessment",
+    "expected_course_code": null,
+    "why": "The assessment chunk is the only location where internal mark allocations are specified numerically. If this chunk is absent, Vidya cannot answer marks-related questions.",
+    "fail_means": "Assessment section was merged into a course block chunk and its content is diluted."
+  },
+  {
+    "test_id": "SYL-003",
+    "doc_type": "syllabus",
+    "query": "What are the prerequisites for the C Programming Lab?",
+    "expected_chunk_contains": "Knowledge of Programming",
+    "expected_section_type": "course_block",
+    "expected_course_code": "2A1COMM01L",
+    "why": "The prerequisites field exists only in the course block for 2A1COMM01L. It must not be split away from the course title.",
+    "fail_means": "Course block was split at the prerequisites line, orphaning the prerequisite from its course title."
+  },
+  {
+    "test_id": "SYL-004",
+    "doc_type": "syllabus",
+    "query": "Which textbooks are recommended for Data Structures?",
+    "expected_chunk_contains": "Ellis Horowitz and Sartaj Sahni",
+    "expected_section_type": "references",
+    "expected_course_code": "2A2COMM02T",
+    "why": "Reference books appear only in the Data Structures course block references section. Must not be mixed with Computer Fundamentals references.",
+    "fail_means": "References from different courses were merged into one chunk, causing wrong book to be cited."
+  },
+  {
+    "test_id": "SYL-005",
+    "doc_type": "syllabus",
+    "query": "How many credits does Computer Fundamentals carry?",
+    "expected_chunk_contains": "Credits 03",
+    "expected_section_type": "course_block",
+    "expected_course_code": "2A1COMM01T",
+    "why": "Credit count appears in the course block header and must be in the same chunk as the course title for Vidya to answer 'Computer Fundamentals carries 3 credits'.",
+    "fail_means": "Course header was split from the course content, separating credits from course name."
+  },
+  {
+    "test_id": "SLD-001",
+    "doc_type": "lecture_slides",
+    "query": "How does a hash table handle two keys that hash to the same index?",
+    "expected_chunk_contains": "linked list table",
+    "expected_slide_range_contains": [37, 43],
+    "why": "Collision resolution via chaining is explained in slides 37-43. The group containing those slides is the correct retrieval target.",
+    "fail_means": "Slides 37-43 were split across two groups, diluting the collision resolution explanation."
+  },
+  {
+    "test_id": "SLD-002",
+    "doc_type": "lecture_slides",
+    "query": "What is the time complexity of linked list search?",
+    "expected_chunk_contains": "Search: slow",
+    "expected_slide_range_contains": [30],
+    "why": "Slide 30 contains the explicit performance summary. It must be in the same group as the search operation slides.",
+    "fail_means": "Slide 30 (summary) was separated from slides 15-29 (search operations), making the complexity ungrouped."
+  },
+  {
+    "test_id": "SLD-003",
+    "doc_type": "lecture_slides",
+    "query": "How do you free all the nodes in a linked list in C?",
+    "expected_chunk_contains": "Table_free",
+    "expected_slide_range_contains": [21, 29],
+    "why": "The Free operation walkthrough spans slides 21-29. The group containing those slides is the correct target.",
+    "fail_means": "The multi-slide free walkthrough was fragmented into groups that individually lack context."
+  },
+  {
+    "test_id": "SLD-004",
+    "doc_type": "lecture_slides",
+    "query": "How does hash table performance compare to linked list?",
+    "expected_chunk_contains": "Search: fast",
+    "expected_slide_range_contains": [65],
+    "why": "Hash table performance summary on slide 65 explicitly contrasts with linked list. That group chunk must contain the contrast.",
+    "fail_means": "Slide 65 was grouped with unrelated post-summary slides, diluting the comparison."
+  },
+  {
+    "test_id": "SLD-005",
+    "doc_type": "lecture_slides",
+    "query": "What constant does the hash function use to convert a string to an index?",
+    "expected_chunk_contains": "65599",
+    "expected_slide_range_contains": [35, 36],
+    "why": "The specific hash function multiplier 65599 appears only in slides 35-36. That chunk is uniquely identifiable.",
+    "fail_means": "Slides 35-36 were grouped with unrelated slides, diluting the hash function specifics."
+  },
+  {
+    "test_id": "ACA-001",
+    "doc_type": "academic_reading",
+    "query": "What happens when you delete a BST node that has two children?",
+    "expected_chunk_contains": "replace z with its successor",
+    "expected_section_title_contains": "Deletion",
+    "why": "The two-children deletion case is in section 1.3. Only that chunk contains the successor-replacement logic.",
+    "fail_means": "Section 1.3 was split mid-explanation, separating the two-children case from its description."
+  },
+  {
+    "test_id": "ACA-002",
+    "doc_type": "academic_reading",
+    "query": "What is the binary search tree property?",
+    "expected_chunk_contains": "y.key",
+    "expected_section_title_contains": "binary search tree",
+    "why": "The formal statement of the BST property appears in the section 1 introduction. Must be in the same chunk as the definition.",
+    "fail_means": "The formal property statement was split from the surrounding definition context."
+  },
+  {
+    "test_id": "ACA-003",
+    "doc_type": "academic_reading",
+    "query": "How do red-black trees guarantee logarithmic height?",
+    "expected_chunk_contains": "2 log",
+    "expected_section_title_contains": "red black",
+    "why": "The height lemma and proof are in section 2.1. The chunk must contain the log bound and the proof sketch.",
+    "fail_means": "The lemma statement was split from its proof, making the bound unverifiable from the chunk alone."
+  },
+  {
+    "test_id": "ACA-004",
+    "doc_type": "academic_reading",
+    "query": "What are the properties every red-black tree must satisfy?",
+    "expected_chunk_contains": "Every node has a color",
+    "expected_section_title_contains": "red black tree properties",
+    "why": "The five properties are enumerated as a numbered list in section 2.1. The list must not be split mid-enumeration.",
+    "fail_means": "The properties list was split, causing only properties 1-3 to appear in the retrieved chunk."
+  },
+  {
+    "test_id": "ACA-005",
+    "doc_type": "academic_reading",
+    "query": "How long does it take to search a binary search tree?",
+    "expected_chunk_contains": "O(h)",
+    "expected_section_title_contains": "Runtime",
+    "why": "Runtime analysis O(h) appears in section 1.0.1. The chunk must contain both the claim and the h = height explanation.",
+    "fail_means": "Runtime analysis was merged into a larger chunk where the O(h) claim is buried among unrelated content."
+  }
+]

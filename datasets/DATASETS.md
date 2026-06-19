@@ -1,44 +1,42 @@
 # Datasets
 
-## Safety eval datasets
+## Retrieval eval datasets (`datasets/retrieval/`)
 
-Copy from the original VidyaMobile repo:
+Used by `eval/retrieval_eval.py` — offline, no API key required.
 
-```
-datasets/safety/ci_scenarios.csv   ← copy from sk08/datasets/ci_scenarios.csv
-```
+| File | Size | Source |
+|------|------|--------|
+| `benchmark_dataset.json` | 75 QA pairs | Embedding selection benchmark (SK-02) |
+| `retrieval_tests.json` | 15 structural checks | Chunker validation tests (SK-01) |
 
-The full 2500-scenario CSV is gitignored — it stays local only.
-
-## Tenant isolation datasets
-
-These files need to be created (or copied from the original repo's sk10/datasets/ if they exist):
-
-```
-datasets/tenant/tenant_a_queries.json   # queries + ground-truth chunk IDs for "state-univ"
-datasets/tenant/tenant_b_queries.json   # queries + ground-truth chunk IDs for "city-college"
-datasets/tenant/leakage_probes.json     # cross-tenant probes to test isolation
-```
-
-### Format — tenant query files
-
+Format — benchmark_dataset.json:
 ```json
 [
   {
-    "query": "What is photosynthesis?",
-    "chunk_ids": ["ta_c1", "ta_c2"]
+    "query_id": "q001",
+    "doc_type": "syllabus",
+    "query": "What topics are covered in Unit II?",
+    "relevant_chunk_ids": ["syl_abc123_0001"],
+    "document_text": "Unit II covers data structures..."
   }
 ]
 ```
 
-### Format — leakage probes
+## Safety eval datasets (`datasets/safety/`)
 
-```json
-[
-  {
-    "query": "What is photosynthesis?",
-    "tenant_id": "state-univ",
-    "forbidden_tenant_id": "city-college"
-  }
-]
-```
+Used by `eval/safety_eval.py`.
+
+| File | Committed | Notes |
+|------|-----------|-------|
+| `ci_scenarios.csv` | Yes | 30-scenario CI subset |
+| `Vidya-Scenarios-2500.csv` | **No (gitignored)** | Full 2500-scenario set, local only |
+
+## Tenant isolation datasets (`datasets/tenant/`)
+
+Used by `eval/tenant_eval.py` and `eval_service/tenant/seed_kb.py`.
+
+| File | Tenant | Description |
+|------|--------|-------------|
+| `tenant_a_queries.json` | `state-univ` | Query + ground-truth chunk IDs |
+| `tenant_b_queries.json` | `city-college` | Query + ground-truth chunk IDs |
+| `leakage_probes.json` | cross-tenant | Probes that must NOT leak across tenants |

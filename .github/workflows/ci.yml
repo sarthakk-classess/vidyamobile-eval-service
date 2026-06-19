@@ -38,6 +38,9 @@ jobs:
       - name: Run unit tests
         run: pytest tests/unit/ -v --tb=short --cov=eval_service --cov-report=xml
 
+      - name: Run retrieval eval (offline)
+        run: python eval/retrieval_eval.py --gate 0.87
+
       - name: Run safety eval (mock)
         run: python eval/safety_eval.py
         env:
@@ -47,6 +50,14 @@ jobs:
         run: python eval/tenant_eval.py
         env:
           TENANT_MOCK_MODE: "isolated"
+
+      - name: Upload retrieval eval report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: retrieval-eval-report
+          path: reports/retrieval/*.json
+          if-no-files-found: ignore
 
       - name: Upload safety eval report
         uses: actions/upload-artifact@v4
@@ -212,6 +223,13 @@ jobs:
 
       - name: Install dependencies
         run: pip install -r requirements.txt
+
+      - name: Download retrieval eval report
+        uses: actions/download-artifact@v4
+        with:
+          name: retrieval-eval-report
+          path: reports/retrieval/
+        continue-on-error: true
 
       - name: Download safety eval report
         uses: actions/download-artifact@v4

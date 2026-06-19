@@ -1,0 +1,362 @@
+[
+  {
+    "query_id": "SYL-Q01",
+    "doc_type": "syllabus",
+    "query": "What topics are covered in Unit 3 of Data Structures?",
+    "relevant_chunk_ids": ["syl_bagalkot_ds_0004"],
+    "document_text": "Unit III\nStacks: Basic Concepts, Definition and Representation of stacks. Operations on stacks. Applications of stacks. Infix, postfix and prefix notations. Conversion from infix to postfix using stack. Evaluation of postfix expression.\nQueues: Basic Concepts, Definition and Representation of queues. Types of queues - Simple queues, Circular queues, Double ended queues, Priority queues.\nLinked list: Basic Concepts, Definition and Representation of linked list. Types - Singly linked list, Doubly linked list, Circular linked list. Operations on Singly linked lists.",
+    "irrelevant_chunks": ["syl_bagalkot_ds_0002", "syl_bagalkot_ds_0005", "syl_bagalkot_ds_0007"]
+  },
+  {
+    "query_id": "SYL-Q02",
+    "doc_type": "syllabus",
+    "query": "How many internal assessment marks are there and how are they split?",
+    "relevant_chunk_ids": ["syl_bagalkot_assess_0001"],
+    "document_text": "ASSESSMENT METHODS\nFormative Assessment for Theory\nCIA : C1  5 Marks - 1st Internal Assessment Test after 8 weeks\nCIA : C2 10 Marks - 2nd Internal Assessment Test after 15 weeks\nCIA : C3  5 Marks - Assignment or Activity\nTotal Internal Marks: 20\nSummative Assessment for Theory:\nSEMESTER END EXAM: SEE C4 80 Marks",
+    "irrelevant_chunks": ["syl_bagalkot_ds_0001", "syl_bagalkot_ds_0003"]
+  },
+  {
+    "query_id": "SYL-Q03",
+    "doc_type": "syllabus",
+    "query": "What are the prerequisites for learning Data Structures?",
+    "relevant_chunk_ids": ["syl_bagalkot_ds_0001"],
+    "document_text": "Year I Course Code: 2A2COMM02T\nCourse Title: Data Structures using C\nCredits 03\nSem. 2 Hours 42\nCourse Pre-requisites, if any: NA\nFormative Assessment Marks: 20\nSummative Assessment Marks: 80\nCourse Outcomes: Describe how arrays, linked structures, stacks, queues, trees, and graphs are represented in memory. Write programs using these data structures.",
+    "irrelevant_chunks": ["syl_bagalkot_ds_0004", "syl_bagalkot_assess_0001"]
+  },
+  {
+    "query_id": "SYL-Q04",
+    "doc_type": "syllabus",
+    "query": "Which textbooks are recommended for Computer Fundamentals course?",
+    "relevant_chunk_ids": ["syl_bagalkot_cf_refs_0001"],
+    "document_text": "Recommended Learning Resources for Computer Fundamentals and Programming in C:\n1. Pradeep K. Sinha and Priti Sinha: Computer Fundamentals (Sixth Edition), BPB Publication\n2. E. Balgurusamy: Programming in ANSI C (TMH)\n3. Kamthane: Programming with ANSI and TURBO C, Pearson Education\n4. V. Rajaraman: Programming in C, PHI\n5. Kernighan and Ritche: The C Programming Language, PHI\n6. Yashwant Kanitkar: Let us C",
+    "irrelevant_chunks": ["syl_bagalkot_ds_refs_0001", "syl_bagalkot_assess_0001"]
+  },
+  {
+    "query_id": "SYL-Q05",
+    "doc_type": "syllabus",
+    "query": "What will students learn about recursion in the course?",
+    "relevant_chunk_ids": ["syl_bagalkot_ds_0003"],
+    "document_text": "Unit II\nRecursion: Definition, Types of recursions. Recursion Technique Examples - Fibonacci numbers, GCD, Binomial coefficient nCr, Towers of Hanoi. Comparison between iterative and recursive functions.\nSorting: Selection sort, Bubble sort, Merge Sort, Quick sort, Insertion sort.\nSearching: Sequential Search, Binary search. Iterative and Recursive searching.",
+    "irrelevant_chunks": ["syl_bagalkot_ds_0001", "syl_bagalkot_ds_0004"]
+  },
+  {
+    "query_id": "SYL-Q06",
+    "doc_type": "syllabus",
+    "query": "What is the duration of the semester end exam?",
+    "relevant_chunk_ids": ["syl_bagalkot_assess_0001"],
+    "document_text": "ASSESSMENT METHODS\nFormative Assessment for Theory\nCIA : C1  5 Marks - 1st Internal Assessment Test after 8 weeks\nCIA : C2 10 Marks - 2nd Internal Assessment Test after 15 weeks\nCIA : C3  5 Marks - Assignment or Activity\nTotal Internal Marks: 20\nSummative Assessment for Theory:\nSEMESTER END EXAM: SEE C4 80 Marks\nDuration of ESA: 3 hours",
+    "irrelevant_chunks": ["syl_bagalkot_ds_0001", "syl_bagalkot_cf_0001"]
+  },
+  {
+    "query_id": "SYL-Q07",
+    "doc_type": "syllabus",
+    "query": "What C programming topics are covered in Unit 2?",
+    "relevant_chunk_ids": ["syl_bagalkot_cf_0003"],
+    "document_text": "Unit II - Computer Fundamentals and Programming in C\nIntroduction to C Programming: Introduction, History and Features of C. Characteristics of C. Structure of C Program with Examples. Creating and Executing a C Program.\nC Programming Basic Concepts: C Character Set, Data types, C tokens - keywords, identifiers, constants and variables. Declaration and initialization of variables. Symbolic constants.\nInput and output with C: Formatted I/O functions - printf() and scanf(). Unformatted I/O functions - getchar(), putchar(), gets() and puts().\nOperators and Expressions: Arithmetic, Relational, Logical, Assignment, Increment and Decrement operators. Operator Precedence.",
+    "irrelevant_chunks": ["syl_bagalkot_cf_0001", "syl_bagalkot_ds_0001"]
+  },
+  {
+    "query_id": "SYL-Q08",
+    "doc_type": "syllabus",
+    "query": "How many credits does the C Programming Lab carry?",
+    "relevant_chunk_ids": ["syl_bagalkot_lab_0001"],
+    "document_text": "Year I Course Code: 2A1COMM01L\nCourse Title: C Programming Lab\nCredits 02\nSem. I Hours 50\nCourse Pre-requisites: Knowledge of Programming\nFormative Assessment Marks: 10\nSummative Assessment Marks: 40\nDuration of ESA: 03 hrs.",
+    "irrelevant_chunks": ["syl_bagalkot_cf_0001", "syl_bagalkot_ds_0001"]
+  },
+  {
+    "query_id": "SYL-Q09",
+    "doc_type": "syllabus",
+    "query": "What tree topics are covered in Unit 4 of Data Structures?",
+    "relevant_chunk_ids": ["syl_bagalkot_ds_0005"],
+    "document_text": "Unit IV - Data Structures using C\nTrees: Definition. Tree terminologies - node, root node, parent node, ancestors of a node, siblings, terminal and non-terminal nodes, degree of a node, level, edge, path, depth.\nBinary tree: Types of binary trees - strict binary tree, complete binary tree. Traversal of binary tree - preorder, inorder and postorder traversal. Binary search tree and heap tree.",
+    "irrelevant_chunks": ["syl_bagalkot_ds_0003", "syl_bagalkot_ds_0004"]
+  },
+  {
+    "query_id": "SYL-Q10",
+    "doc_type": "syllabus",
+    "query": "What are the program outcomes for the BSc Computer Science degree?",
+    "relevant_chunk_ids": ["syl_bagalkot_preamble_0002"],
+    "document_text": "PROGRAM OUTCOMES:\n1. Discipline knowledge: Acquiring knowledge on basics of Computer Science and ability to apply design principles.\n2. Problem Solving: Improved reasoning with strong mathematical ability to Identify, formulate and analyze problems.\n3. Programming a computer: Exhibiting strong skills required to program a computer for various issues.\n4. Application Systems Knowledge: Possessing sound knowledge on computer application software.\n5. Communication: Must have a reasonably good communication knowledge both in oral and writing.\n6. Ethics on Profession, Environment and Society: Exhibiting professional ethics.\n7. Lifelong Learning: Should become an independent learner.",
+    "irrelevant_chunks": ["syl_bagalkot_cf_0001", "syl_bagalkot_ds_0001"]
+  },
+  {
+    "query_id": "SYL-Q11",
+    "doc_type": "syllabus",
+    "query": "What sorting algorithms are taught in the curriculum?",
+    "relevant_chunk_ids": ["syl_bagalkot_ds_0003"],
+    "document_text": "Unit II\nSorting: Selection sort, Bubble sort, Merge Sort, Quick sort, Insertion sort.\nSearching: Sequential Search, Binary search. Iterative and Recursive searching.",
+    "irrelevant_chunks": ["syl_bagalkot_ds_0004", "syl_bagalkot_cf_0004"]
+  },
+  {
+    "query_id": "SYL-Q12",
+    "doc_type": "syllabus",
+    "query": "What are the lab exercises for C programming?",
+    "relevant_chunk_ids": ["syl_bagalkot_lab_0002"],
+    "document_text": "Practice Labs Part A:\n1. Write a C Program to read radius of a circle and find area and circumference.\n2. Write a C Program to read three numbers and find the biggest.\n3. Write a C Program to check whether the given number is prime or not.\n4. Write a C Program to generate n prime numbers.\n5. Write a C Program to read marks scored by n students and find the average.\nPart B:\n1. Write a C Program to find the length of a string without using built-in function.\n2. Write a C Program to demonstrate string functions.\n3. Write a C Program to demonstrate student structure.",
+    "irrelevant_chunks": ["syl_bagalkot_cf_0001", "syl_bagalkot_ds_0001"]
+  },
+  {
+    "query_id": "SYL-Q13",
+    "doc_type": "syllabus",
+    "query": "What is the total marks for Semester 1?",
+    "relevant_chunk_ids": ["syl_bagalkot_schedule_0001"],
+    "document_text": "SEMESTER-I Credit Structure\nLanguage 1: 100 marks, 3 credits\nLanguage 2: 100 marks, 3 credits\nComputer Fundamentals and Programming in C: 100 marks, 3 credits\nC Programming Lab: 50 marks, 2 credits\nConstitutional Values: 50 marks, 2 credits\nEnvironmental Studies: included\nTotal Marks: 700\nSemester Credits: 23",
+    "irrelevant_chunks": ["syl_bagalkot_cf_0001", "syl_bagalkot_assess_0001"]
+  },
+  {
+    "query_id": "SYL-Q14",
+    "doc_type": "syllabus",
+    "query": "What control structures are taught in Unit 3 of C programming?",
+    "relevant_chunk_ids": ["syl_bagalkot_cf_0004"],
+    "document_text": "Unit III - Computer Fundamentals and Programming in C\nControl Structures: Decision making Statements - Simple if, if_else, nested if_else, else_if ladder, switch case, goto, break and continue statements.\nLooping Statements: Entry controlled and Exit controlled statements. while, do while, for loops. Nested loops with examples.\nArrays: One Dimensional arrays - Declaration, Initialization and Memory representation. Two Dimensional arrays - Declaration, Initialization and Memory representation.",
+    "irrelevant_chunks": ["syl_bagalkot_cf_0003", "syl_bagalkot_ds_0003"]
+  },
+  {
+    "query_id": "SYL-Q15",
+    "doc_type": "syllabus",
+    "query": "What does the question paper pattern look like for the exam?",
+    "relevant_chunk_ids": ["syl_bagalkot_qp_0001"],
+    "document_text": "Question Paper Pattern - B.Sc Degree Examination COMPUTER SCIENCE\nTime: 3 hours, Max Marks: 80\nPart A: Answer any TEN questions - 10 x 2 = 20 marks\nPart B: Answer any FOUR questions - 4 x 5 = 20 marks\nPart C: Answer any FOUR questions - 4 x 10 = 40 marks\nInstruction: Question 1 has 12 sub-questions with 3 from each unit, each 2 marks. Questions 2-7 are from units I to IV, 5 marks each. Questions 8-12 are from units I to IV, 10 marks each.",
+    "irrelevant_chunks": ["syl_bagalkot_assess_0001", "syl_bagalkot_cf_0001"]
+  },
+  {
+    "query_id": "SLD-Q01",
+    "doc_type": "lecture_slides",
+    "query": "How does a hash table handle collision when two keys hash to the same index?",
+    "relevant_chunk_ids": ["sld_cos217_0005"],
+    "document_text": "Slide 31: Data Structure #2: Hash Table\nFixed-size array where each element points to a linked list. Hash function maps each key to an array index.\n\nSlide 32: Hash Table Example\nInteger keys, array of size 5, hash function h mod 5. 1776 mod 5 = 1. 1861 mod 5 = 1. Both keys hash to index 1 - handled by chaining in a linked list.\n\nSlide 33: How Large an Array?\nLarge enough that average bucket size is 1. Short buckets mean fast search. Long buckets mean slow search.\n\nSlide 34: What Kind of Hash Function?\nGood at distributing elements across the array. Distribute results evenly to avoid very long buckets.",
+    "irrelevant_chunks": ["sld_cos217_0001", "sld_cos217_0002", "sld_cos217_0003"]
+  },
+  {
+    "query_id": "SLD-Q02",
+    "doc_type": "lecture_slides",
+    "query": "What is the time complexity of linked list search operation?",
+    "relevant_chunk_ids": ["sld_cos217_0003"],
+    "document_text": "Slide 30: Linked List Performance\nCreate: fast\nAdd: fast\nSearch: slow\nFree: slow\nWould it be better to keep nodes sorted by key? What are the asymptotic run times in big-oh notation?",
+    "irrelevant_chunks": ["sld_cos217_0005", "sld_cos217_0006", "sld_cos217_0007"]
+  },
+  {
+    "query_id": "SLD-Q03",
+    "doc_type": "lecture_slides",
+    "query": "How do you implement adding a node to a linked list in C?",
+    "relevant_chunk_ids": ["sld_cos217_0002"],
+    "document_text": "Slide 10: Linked List: Add (1)\nvoid Table_add(struct Table *t, const char *key, int value) {\n  struct Node *p = malloc(sizeof(struct Node));\n  p->key = key;\n  p->value = value;\n  p->next = t->first;\n  t->first = p;\n}\nInsert new node at the front of the list.\n\nSlide 11: Linked List: Add (2)\nTable_add(t, 'Ruth', 3); Table_add(t, 'Gehrig', 4); Table_add(t, 'Mantle', 7);\nThese are pointers to strings - not copies.",
+    "irrelevant_chunks": ["sld_cos217_0001", "sld_cos217_0003", "sld_cos217_0005"]
+  },
+  {
+    "query_id": "SLD-Q04",
+    "doc_type": "lecture_slides",
+    "query": "What hash function is used to convert string keys to integers?",
+    "relevant_chunk_ids": ["sld_cos217_0006"],
+    "document_text": "Slide 35: Hashing String Keys to Integers\nSimple schemes do not distribute evenly. Here is a reasonably good hash function using weighted sum.\n\nSlide 36: Implementing Hash Function\nunsigned int hash(const char *x) {\n  unsigned int h = 0U;\n  for (i=0; x[i] != 0; i++)\n    h = h * 65599 + (unsigned char)x[i];\n  return h % 1024;\n}\nBest if a (65599) and ARRAYSIZE (1024) are relatively prime.",
+    "irrelevant_chunks": ["sld_cos217_0001", "sld_cos217_0005", "sld_cos217_0007"]
+  },
+  {
+    "query_id": "SLD-Q05",
+    "doc_type": "lecture_slides",
+    "query": "How does hash table search compare to linked list search performance?",
+    "relevant_chunk_ids": ["sld_cos217_0007"],
+    "document_text": "Slide 65: Hash Table Performance\nCreate: fast\nAdd: fast\nSearch: fast\nFree: slow\nIs hash table search always fast? What are the asymptotic run times?",
+    "irrelevant_chunks": ["sld_cos217_0003", "sld_cos217_0002", "sld_cos217_0004"]
+  },
+  {
+    "query_id": "SLD-Q06",
+    "doc_type": "lecture_slides",
+    "query": "What is key ownership and why does it matter in data structures?",
+    "relevant_chunk_ids": ["sld_cos217_0008"],
+    "document_text": "Slide 66: Key Ownership\nCaller passes key which is a pointer to memory. Table_add stores the address where the string resides.\n\nSlide 67: Key Ownership Problem\nIf client changes string at memory address k after calling Table_add, the key inside the table also changes. Table_search for original key fails.\n\nSlide 68: Key Ownership Solution\nTable_add saves a copy of the given key using malloc and strcpy. The data structure owns the copy and is responsible for freeing it.",
+    "irrelevant_chunks": ["sld_cos217_0001", "sld_cos217_0005", "sld_cos217_0006"]
+  },
+  {
+    "query_id": "SLD-Q07",
+    "doc_type": "lecture_slides",
+    "query": "How do you free a linked list properly in C?",
+    "relevant_chunk_ids": ["sld_cos217_0004"],
+    "document_text": "Slide 21: Linked List: Free (1)\nvoid Table_free(struct Table *t) {\n  struct Node *p;\n  struct Node *nextp;\n  for (p = t->first; p != NULL; p = nextp) {\n    nextp = p->next;\n    free(p);\n  }\n  free(t);\n}\nMust save nextp before freeing p - cannot access p->next after p is freed.",
+    "irrelevant_chunks": ["sld_cos217_0002", "sld_cos217_0003", "sld_cos217_0006"]
+  },
+  {
+    "query_id": "SLD-Q08",
+    "doc_type": "lecture_slides",
+    "query": "What is the struct definition for a linked list node?",
+    "relevant_chunk_ids": ["sld_cos217_0001"],
+    "document_text": "Slide 7: Linked List: Data Structure\nstruct Node {\n  const char *key;\n  int value;\n  struct Node *next;\n};\nstruct Table {\n  struct Node *first;\n};\nData structure: Nodes, each contains key/value pair and pointer to next node.",
+    "irrelevant_chunks": ["sld_cos217_0002", "sld_cos217_0005", "sld_cos217_0006"]
+  },
+  {
+    "query_id": "SLD-Q09",
+    "doc_type": "lecture_slides",
+    "query": "How can hash function computation be made faster using bitwise operators?",
+    "relevant_chunk_ids": ["sld_cos217_0009"],
+    "document_text": "Slide 72: Recall Bitwise Operators in C\nBitwise AND (&) can replace mod for power-of-2 sizes. h = 53 & 15 gives last four bits, equivalent to 53 mod 16.\n\nSlide 73: A Faster Hash Function\nReplace h % 1024 with h & 1023. Faster because bitwise AND avoids integer division. Works when ARRAYSIZE is a power of 2.",
+    "irrelevant_chunks": ["sld_cos217_0006", "sld_cos217_0007", "sld_cos217_0001"]
+  },
+  {
+    "query_id": "SLD-Q10",
+    "doc_type": "lecture_slides",
+    "query": "What are the goals of studying data structures and algorithms?",
+    "relevant_chunk_ids": ["sld_cos217_0000"],
+    "document_text": "Slide 1: Data Structures and Algorithms\nThe material is drawn from The Practice of Programming by Kernighan and Pike Chapter 2.\n\nSlide 2: Motivating Quotations\nEvery program depends on algorithms and data structures but few depend on inventing brand new ones.\nGood programmers worry about data structures and their relationships.\n\nSlide 3: Goals of this Lecture\nHelp you learn or refresh your memory about common data structures and algorithms.\nCommon data structures serve as high level building blocks. A power programmer rarely creates programs from scratch.",
+    "irrelevant_chunks": ["sld_cos217_0003", "sld_cos217_0005", "sld_cos217_0007"]
+  },
+  {
+    "query_id": "SLD-Q11",
+    "doc_type": "lecture_slides",
+    "query": "How do you create a hash table in C?",
+    "relevant_chunk_ids": ["sld_cos217_0010"],
+    "document_text": "Slide 44: Hash Table: Data Structure\nenum { BUCKET_COUNT = 1024 };\nstruct Table { struct Node *array[BUCKET_COUNT]; };\n\nSlide 45: Hash Table: Create\nstruct Table *Table_create(void) {\n  struct Table *t;\n  t = (struct Table*)calloc(1, sizeof(struct Table));\n  return t;\n}\ncalloc initializes all array pointers to NULL automatically.",
+    "irrelevant_chunks": ["sld_cos217_0001", "sld_cos217_0002", "sld_cos217_0006"]
+  },
+  {
+    "query_id": "SLD-Q12",
+    "doc_type": "lecture_slides",
+    "query": "Why does hash table free operation take longer than other operations?",
+    "relevant_chunk_ids": ["sld_cos217_0011"],
+    "document_text": "Slide 56: Hash Table: Free\nvoid Table_free(struct Table *t) {\n  for (b = 0; b < BUCKET_COUNT; b++)\n    for (p = t->array[b]; p != NULL; p = nextp) {\n      nextp = p->next;\n      free(p);\n    }\n  free(t);\n}\nMust iterate over all BUCKET_COUNT buckets even if most are empty. This is why Free is slow even though Add and Search are fast.",
+    "irrelevant_chunks": ["sld_cos217_0004", "sld_cos217_0007", "sld_cos217_0009"]
+  },
+  {
+    "query_id": "SLD-Q13",
+    "doc_type": "lecture_slides",
+    "query": "How can you speed up key comparison in hash table search?",
+    "relevant_chunk_ids": ["sld_cos217_0012"],
+    "document_text": "Slide 74: Speeding Up Key Comparisons\nTrick: store full hash result in the Node structure.\nint Table_search(struct Table *t, const char *key, int *value) {\n  int h = hash(key);\n  for (p = t->array[h%1024]; p != NULL; p = p->next)\n    if ((p->hash == h) && strcmp(p->key, key) == 0) { ... }\n}\nFirst check hash equality (integer comparison, very fast) before calling strcmp. Avoids expensive string comparison in most cases.",
+    "irrelevant_chunks": ["sld_cos217_0006", "sld_cos217_0008", "sld_cos217_0010"]
+  },
+  {
+    "query_id": "SLD-Q14",
+    "doc_type": "lecture_slides",
+    "query": "What is a common task that motivates the need for data structures?",
+    "relevant_chunk_ids": ["sld_cos217_0000"],
+    "document_text": "Slide 4: A Common Task\nMaintain a table of key/value pairs. Each key is a string, each value is an int. Unknown number of key-value pairs.\nExamples: (student name, grade), (baseball player, number), (variable name, value).\nFor simplicity allow duplicate keys - client responsibility to check.",
+    "irrelevant_chunks": ["sld_cos217_0003", "sld_cos217_0007", "sld_cos217_0010"]
+  },
+  {
+    "query_id": "SLD-Q15",
+    "doc_type": "lecture_slides",
+    "query": "What is the summary of data structures covered in the lecture?",
+    "relevant_chunk_ids": ["sld_cos217_0013"],
+    "document_text": "Slide 69: Summary\nCommon data structures and associated algorithms:\nLinked list: Fast insert, slow search.\nHash table: Fast insert, potentially fast search. Invaluable for storing key/value pairs. Very common.\nRelated issues: Hashing algorithms, Memory ownership.",
+    "irrelevant_chunks": ["sld_cos217_0003", "sld_cos217_0007", "sld_cos217_0001"]
+  },
+  {
+    "query_id": "ACA-Q01",
+    "doc_type": "academic_reading",
+    "query": "What is the binary search tree property formally stated?",
+    "relevant_chunk_ids": ["acad_cs161_bst_0001"],
+    "document_text": "A binary search tree is a data structure composed of nodes. Each node has a key which determines the node's position in the tree.\nBinary-search-tree property: Let x be a node in a binary search tree. If y is a node in the left subtree of x, then y.key is less than or equal to x.key. If y is a node in the right subtree of x, then y.key is greater than or equal to x.key.\nThis means a tree where 2 is in the right subtree of 5 despite being smaller than 5 does NOT satisfy the BST property.",
+    "irrelevant_chunks": ["acad_cs161_bst_0003", "acad_cs161_bst_0005", "acad_cs161_bst_0007"]
+  },
+  {
+    "query_id": "ACA-Q02",
+    "doc_type": "academic_reading",
+    "query": "How long does it take to search a binary search tree in the worst case?",
+    "relevant_chunk_ids": ["acad_cs161_bst_0002"],
+    "document_text": "1.0.1 Runtime\nBinary search trees support Search, Minimum, Maximum, Predecessor, Successor, Insert, and Delete. These operations run in time proportional to the height of the tree.\nIn the best case the tree is a complete binary tree and the height is Theta(log n).\nIn the worst case the tree is a linear chain so the height is Theta(n).\nLater we will talk about red-black trees which guarantee logarithmic height O(log n) at all times.",
+    "irrelevant_chunks": ["acad_cs161_bst_0001", "acad_cs161_bst_0006", "acad_cs161_bst_0008"]
+  },
+  {
+    "query_id": "ACA-Q03",
+    "doc_type": "academic_reading",
+    "query": "How do you delete a node with two children from a BST?",
+    "relevant_chunk_ids": ["acad_cs161_bst_0005"],
+    "document_text": "1.3 Deletion\nCase 3: z has two children. We want to replace z with its successor s which must be in the right subtree because s is smaller than all other nodes in z's right subtree so ordering is preserved.\nFortunately s cannot have a left child because that child would be greater than z but less than s. So if we mess with s we only have one child to worry about.\nIf s is the direct right child of z we move s and s's right child up by one. Otherwise we pretend we are deleting s and then allow s to take z's place. The deletion routine runs in O(h) time.",
+    "irrelevant_chunks": ["acad_cs161_bst_0001", "acad_cs161_bst_0003", "acad_cs161_bst_0007"]
+  },
+  {
+    "query_id": "ACA-Q04",
+    "doc_type": "academic_reading",
+    "query": "What are all five properties a red-black tree must satisfy?",
+    "relevant_chunk_ids": ["acad_cs161_rbt_0001"],
+    "document_text": "2.1 Red Black Tree Properties\nA red-black tree is a binary search tree satisfying the following properties:\n1. Every node has a color, which is either red or black.\n2. The root is black.\n3. Every leaf is black. NIL nodes are leaves and are all black.\n4. If a node is red, then both its children are black.\n5. For each node, all simple paths from the node to descendant leaves contain the same number of black nodes.",
+    "irrelevant_chunks": ["acad_cs161_bst_0001", "acad_cs161_bst_0002", "acad_cs161_bst_0005"]
+  },
+  {
+    "query_id": "ACA-Q05",
+    "doc_type": "academic_reading",
+    "query": "How does red-black tree guarantee height is at most 2 log n?",
+    "relevant_chunk_ids": ["acad_cs161_rbt_0002"],
+    "document_text": "Lemma: A red-black tree with n internal nodes has height at most 2 log(n + 1).\nProof: We claim the subtree at any node x has at least 2^bh(x) - 1 internal nodes.\nBase case: height 0 means x is NIL, subtree has 0 = 2^0 - 1 internal nodes.\nInductive step: each child has black-height bh(x) or bh(x)-1. By induction each child has at least 2^(bh(x)-1) - 1 internal nodes. Subtree has at least 2^bh(x) - 1 nodes.\nSince red nodes must have black children, at least half the nodes on any path are black. Therefore bh(x) >= h/2 and n >= 2^(h/2) - 1. Simplifying: h <= 2 log(n+1).",
+    "irrelevant_chunks": ["acad_cs161_bst_0001", "acad_cs161_rbt_0001", "acad_cs161_bst_0004"]
+  },
+  {
+    "query_id": "ACA-Q06",
+    "doc_type": "academic_reading",
+    "query": "How does inorder tree walk print BST nodes in sorted order?",
+    "relevant_chunk_ids": ["acad_cs161_bst_0003"],
+    "document_text": "1.0.2 Inorder tree walk\nTo print keys in sorted order execute Inorder-Tree-Walk(T.root).\nRuntime: This program runs in Theta(n) time. InorderTreeWalk visits all n nodes.\nT(n) <= T(k) + T(n-k-1) + d where k is size of left subtree.\nGuess T(n) <= (c+d)n + c. Plugging in: T(n) = (c+d)n + c which completes the proof that T(n) = O(n).",
+    "irrelevant_chunks": ["acad_cs161_bst_0001", "acad_cs161_bst_0004", "acad_cs161_rbt_0001"]
+  },
+  {
+    "query_id": "ACA-Q07",
+    "doc_type": "academic_reading",
+    "query": "What is the successor of a node in a binary search tree?",
+    "relevant_chunk_ids": ["acad_cs161_bst_0004"],
+    "document_text": "1.1.3 Successor and Predecessor\nThe successor of a node is the smallest node greater than that node when ordered by key.\nCase 1 - x has a right subtree: Return TreeMinimum(x.right). The minimum of the right subtree is the first element printed after x in InorderTreeWalk.\nCase 2 - x has no right subtree: Proceed up the tree until we find a node that is the left child of its parent. Return that parent. If no such node exists, x has no successor.\nThis code runs in O(h) time because TreeMinimum runs in O(h) time.",
+    "irrelevant_chunks": ["acad_cs161_bst_0001", "acad_cs161_bst_0003", "acad_cs161_bst_0005"]
+  },
+  {
+    "query_id": "ACA-Q08",
+    "doc_type": "academic_reading",
+    "query": "How do rotations preserve ordering in red-black trees?",
+    "relevant_chunk_ids": ["acad_cs161_rbt_0003"],
+    "document_text": "2.2 Rotations\nRotation preserves the ordering of nodes in the tree while correcting an imbalance in height.\nLeft rotation on node x: x's right child y takes x's place. x becomes y's left child. y's left subtree beta becomes x's right subtree.\nThis preserves ordering because: x < y, everything in alpha < x < y, everything in beta > x but < y, everything in gamma > y.",
+    "irrelevant_chunks": ["acad_cs161_rbt_0001", "acad_cs161_bst_0001", "acad_cs161_bst_0005"]
+  },
+  {
+    "query_id": "ACA-Q09",
+    "doc_type": "academic_reading",
+    "query": "How do you find the minimum element in a BST?",
+    "relevant_chunk_ids": ["acad_cs161_bst_0004"],
+    "document_text": "1.1.2 Minimum and Maximum\nTo find the minimum start at the root and take its left child. Keep going until NIL. Return the last non-NIL node.\nThis is correct because: if x has no left subtree, x has the smallest key in its subtree. If x has a left subtree, the smallest key must be in the left subtree by the BST property.\nMinimum and Maximum both run in O(h) time.",
+    "irrelevant_chunks": ["acad_cs161_bst_0001", "acad_cs161_bst_0003", "acad_cs161_rbt_0001"]
+  },
+  {
+    "query_id": "ACA-Q10",
+    "doc_type": "academic_reading",
+    "query": "What is the black-height of a node in a red-black tree?",
+    "relevant_chunk_ids": ["acad_cs161_rbt_0002"],
+    "document_text": "The black-height of a node x, denoted bh(x), is the number of black nodes on any simple path from x down to a leaf, not counting x itself.\nAll NILs have black-height 0.\nBecause each red node must have all black children, the lengths of paths from root to leaf are within a factor of 2 of each other. This gives the logarithmic bound on tree height.",
+    "irrelevant_chunks": ["acad_cs161_rbt_0001", "acad_cs161_bst_0002", "acad_cs161_bst_0005"]
+  },
+  {
+    "query_id": "ACA-Q11",
+    "doc_type": "academic_reading",
+    "query": "What are the three cases for BST node deletion?",
+    "relevant_chunk_ids": ["acad_cs161_bst_0005"],
+    "document_text": "1.3 Deletion - Three Cases\nCase 1: z has no children. Remove z by having its parent point to NIL.\nCase 2: z has one child. Switch so the parent points to z's child instead of z.\nCase 3: z has two children. Replace z with its successor s. s must be in the right subtree. s cannot have a left child. The deletion routine runs in O(h) time.",
+    "irrelevant_chunks": ["acad_cs161_bst_0003", "acad_cs161_bst_0004", "acad_cs161_rbt_0001"]
+  },
+  {
+    "query_id": "ACA-Q12",
+    "doc_type": "academic_reading",
+    "query": "Why do red-black trees guarantee O(log n) for all operations?",
+    "relevant_chunk_ids": ["acad_cs161_rbt_0001"],
+    "document_text": "2 Red Black Trees\nSo far all BST operations run in O(h) time. This could be O(n) if the tree is a linear chain. Red-black trees mitigate this.\nA red-black tree is a balanced binary search tree that ensures its height is logarithmic in n, making all operations O(log n).\nRed-black trees guarantee no simple path from root to leaf is more than twice as long as any other path.",
+    "irrelevant_chunks": ["acad_cs161_bst_0002", "acad_cs161_rbt_0002", "acad_cs161_bst_0005"]
+  },
+  {
+    "query_id": "ACA-Q13",
+    "doc_type": "academic_reading",
+    "query": "How do you insert a node into a binary search tree?",
+    "relevant_chunk_ids": ["acad_cs161_bst_0006"],
+    "document_text": "1.2 Insertion\nTo insert a node start at the root and progress downward until finding a blank space. When found, replace NIL with the node and update pointers.\nMust keep track of x's parent y at all times because once x = NIL we must update y's pointers. NIL.parent does not point to a unique parent node. Insertion also runs in O(h) time.",
+    "irrelevant_chunks": ["acad_cs161_bst_0001", "acad_cs161_bst_0004", "acad_cs161_bst_0005"]
+  },
+  {
+    "query_id": "ACA-Q14",
+    "doc_type": "academic_reading",
+    "query": "What is the Transplant operation used for in BST deletion?",
+    "relevant_chunk_ids": ["acad_cs161_bst_0007"],
+    "document_text": "To write the deletion pseudocode we use the Transplant routine which replaces the subtree rooted at node u with the subtree rooted at node v.\nTransplant updates u's parent to point to v instead of u. If u was the root, v becomes the new root. Transplant does not update v's left or right children - the caller is responsible for that.",
+    "irrelevant_chunks": ["acad_cs161_bst_0004", "acad_cs161_bst_0005", "acad_cs161_rbt_0001"]
+  },
+  {
+    "query_id": "ACA-Q15",
+    "doc_type": "academic_reading",
+    "query": "How does BST search work step by step?",
+    "relevant_chunk_ids": ["acad_cs161_bst_0008"],
+    "document_text": "1.1.1 Search\nThe Search routine searches for a node with a given key. First compare to root. If keys match return the node. If node's key is smaller the result is in the left subtree by BST property. If larger the result is in the right subtree.\nEventually either find the node or reach NIL which means the node is not in the tree.\nSearch runs in O(h) time because the loop executes at most O(h) times.",
+    "irrelevant_chunks": ["acad_cs161_bst_0001", "acad_cs161_bst_0003", "acad_cs161_rbt_0001"]
+  }
+]
